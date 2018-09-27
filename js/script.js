@@ -6,6 +6,7 @@ function w3_close() {
 }
 $(function()
  {
+  w3.includeHTML();
   $("#category span").click(function()
                            {
     var cat=$(this).html();

@@ -1,0 +1,45 @@
+<svg height="600" width="1000"  viewbox="0,0 1000,600" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1000" height="600" stroke="#01796F"/>
+  <circle cx="450" cy="300" r="200" stroke="black" stroke-width="3"/>
+  <style>
+	svg rect {
+  stroke: #01796F;
+  stroke-width: 20px;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  fill: white;
+  animation: dash 10s, fill_rect 1s linear both 2s;
+}
+svg circle {
+  stroke: #E11837;
+  stroke-width: 10px;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: dash 10s linear both 3.2s, fill_circle 1s linear both 4.2s;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 10000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill_rect {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #01796F;
+  }
+}
+@keyframes fill_circle {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #E11837;
+  }
+}
+  </style>
+</svg>
