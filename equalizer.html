@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <title>Shafayat Hossain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shafayat Hossain, My Profile">
+  <meta name="author" content="Shafayat Hossain">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <script src="https://www.w3schools.com/lib/w3.js"></script> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet/less" type="text/css" href="css/alphabet.less" />
+  <body class="">
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-third" style="display:none" id="mySidebar" >
+      <button onclick="w3_close()" class="w3-bar-item w3-large" style="cursor:pointer;">Close &times;</button>
+       <div w3-include-html="nav.html"></div>
+    </div>
+    <!-- Page Container -->
+    <button class="w3-button w3-teal w3-xlarge navigation_btn" onclick="w3_open()" style="">☰</button>
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+
+        <!-- Left Column -->
+        <div class="w3-third" w3-include-html="left.html"></div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+
+        <div class="equalizer">
+      <div class="line line-1">
+      </div>
+      <div class="line line-2">
+      </div>
+      <div class="line line-3">
+      </div>
+      <div class="line line-4">
+      </div>
+      <div class="line line-5">
+      </div>
+      <div class="line line-6">
+      </div>
+      <div class="line line-7">
+      </div>
+      <div class="line line-8">
+      </div>
+      <div class="line line-9">
+      </div>
+      <div class="line line-10">
+      </div>
+    </div>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+
+    <footer class="w3-container w3-teal w3-center w3-margin-top"  w3-include-html="footer.html">
+      
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
+<style type="text/css">
+	@keyframes equalizer {
+  0% {
+    height: 278px;
+    background: #f6c8a6;
+  }
+  25% {
+    height: 203px;
+    background: #f7cbab;
+  }
+  50% {
+    height: 172px;
+    background: #ffffff;
+  }
+  75% {
+    height: 239px;
+    background: #f7cbab;
+  }
+  100% {
+    height: 149px;
+    background: #ed8e4a;
+  }
+}
+@keyframes background_col {
+  0% {
+    background: linear-gradient(top, #5a8cb8 0%, #ea9178 50%, #a90568 51%, #f51de3 100%);
+  }
+  100% {
+    background: linear-gradient(top, #c8c596 0%, #456613 50%, #8a1e21 51%, #691e90 100%);
+  }
+}
+.equalizer {
+  display: flex;
+  justify-content: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 10px auto;
+  animation_name: background_col;
+  background-image: linear-gradient(to top, #1e4b73, rgba(255, 255, 255, 0));
+  overflow: hidden;
+}
+.equalizer .line {
+  align-self: flex-end;
+  height: 0px;
+  width: 100px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.equalizer .line-1 {
+  animation-name: equalizer;
+  animation-duration: 10s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-2 {
+  animation-name: equalizer;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-3 {
+  animation-name: equalizer;
+  animation-duration: 3.33333333s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-4 {
+  animation-name: equalizer;
+  animation-duration: 2.5s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-5 {
+  animation-name: equalizer;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-6 {
+  animation-name: equalizer;
+  animation-duration: 1.66666667s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-7 {
+  animation-name: equalizer;
+  animation-duration: 1.42857143s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-8 {
+  animation-name: equalizer;
+  animation-duration: 1.25s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-9 {
+  animation-name: equalizer;
+  animation-duration: 1.11111111s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.equalizer .line-10 {
+  animation-name: equalizer;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframe background_animation 
+{
+0% {
+  background: linear-gradient(top, #6f61fb 0%, #57d7e0 50%, #e2f7f0 51%, #f906f7 100%);
+}
+100% {
+  background: linear-gradient(top, #13c089 0%, #58b141 50%, #d7458b 51%, #772f55 100%);
+}
+}
+</style>

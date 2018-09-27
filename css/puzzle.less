@@ -1,0 +1,67 @@
+@base: #f7f7f7;
+@format:3;
+@size:512px;
+@piece_size:(@size/@format);
+.game-container
+{
+	height:@size;
+	width:@size;
+	border:solid 20px rgba(0, 128, 0,.8);
+	cursor: pointer;
+	box-sizing:content-box;
+	.puzzple-btn
+	{
+		float: left;
+		height: 32px;
+		width: 32px;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+}
+.puzzle_box
+{
+	height:@size;
+	width:@size;
+	background-image:url("../assets/bg.jpg");
+	background-size: @size @size;
+	box-sizing:border-box;
+	.pieces
+	{
+		background-color:#ff4433;
+		float:left;
+		height:@piece_size;
+		width:@piece_size;
+		font-size:(@piece_size/@format);
+		line-height:@piece_size;
+		text-align:center;
+		color:#FFFFFF;
+		cursor:pointer;
+		position:relative;
+		img
+		{
+			height:@piece_size;
+			width:@piece_size;
+		}
+	}
+	[empty]
+	{
+		background-color:rgba(255, 255, 255,.1);
+		float:left;
+		height:@piece_size;
+		width:@piece_size;
+	}
+	[empty]::before
+	{
+		display: block;
+		content: "";
+		border: solid 5px rgba(255, 255, 255,.9);
+		background-color:rgba(0, 0, 0,.5);
+		margin-top: @piece_size*.25;
+		margin-left: @piece_size*.25;
+		height:@piece_size*.5;
+		width:@piece_size*.5;
+		border-radius: @piece_size;
+	}
+
+}
