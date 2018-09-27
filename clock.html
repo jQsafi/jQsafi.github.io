@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <title>Shafayat Hossain</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shafayat Hossain, My Profile">
+  <meta name="author" content="Shafayat Hossain">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <script src="https://www.w3schools.com/lib/w3.js"></script> 
+  <link rel="stylesheet" href="css/style.css">
+  <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link rel="stylesheet/less" type="text/css" href="css/alphabet.less" />
+  <body class="">
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-third" style="display:none" id="mySidebar" >
+      <button onclick="w3_close()" class="w3-bar-item w3-large" style="cursor:pointer;">Close &times;</button>
+       <div w3-include-html="nav.html"></div>
+    </div>
+    <!-- Page Container -->
+    <button class="w3-button w3-teal w3-xlarge navigation_btn" onclick="w3_open()" style="">☰</button>
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+
+        <!-- Left Column -->
+        <div class="w3-third" w3-include-html="left.html"></div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+
+        <canvas id="analog_clock" width="800" height="800">
+					Sorry, canvas is not supported in this browser.
+				</canvas>
+
+        <!-- End Grid -->
+      </div>
+
+      <!-- End Page Container -->
+    </div>
+
+    <footer class="w3-container w3-teal w3-center w3-margin-top"  w3-include-html="footer.html">
+      
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.8.1/less.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+    	var canvas, ctx, clockWidth, centerX, centerY;
+
+function ClockFace() 
+{
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.beginPath();
+	ctx.fillStyle= "rgba(250, 145, 18,0.1)";
+	ctx.arc(centerX, centerY, centerX-5, 0, 2 * Math.PI,true);
+	ctx.fill();
+	ctx.closePath();
+	ctx.beginPath();
+	ctx.fillStyle= "#f4d442";
+	ctx.arc(centerX, centerY, 10, 0, 2 * Math.PI, false);
+	ctx.fill();
+	ctx.closePath();
+	var hours=12;
+	for (var i= 0; i < 60; i++) 
+	{
+		ctx.lineCap= "square";
+		ctx.save();
+		ctx.beginPath();
+		ctx.translate(centerX, centerY);
+		ctx.rotate(i * Math.PI / 30);
+		ctx.translate(0, -clockWidth / 2);
+		if ((i % 5) == 0) 
+		{
+			ctx.fillStyle= "#e80d0d";
+			ctx.font="40px sans-serif";
+			if(hours==3) 
+			{
+				ctx.rotate(i * Math.PI/-30);
+				ctx.fillText(hours,-20,10);
+			}
+			else if(hours==9) 
+			{
+				ctx.rotate(i * Math.PI/-30);
+				ctx.fillText(hours,0,10);
+			}
+			else if(hours==6) 
+			{
+				ctx.rotate(i * Math.PI/-30);
+				ctx.fillText(hours,-10,0);
+			}
+			else if(hours==7) 
+			{
+				ctx.rotate(i * Math.PI/hours);
+				ctx.fillText(hours,-15,0);
+			}
+			else if(hours==5 || hours==4)
+			{
+				ctx.rotate(i * Math.PI/hours);
+				ctx.fillText(hours,-15,0);
+			}
+			else 
+			{
+				if(hours<10)
+				ctx.fillText(hours,-15,30);
+				else
+					ctx.fillText(hours,-22,32);
+			}
+			if(hours==12) hours=0;
+			hours++;
+		}
+		else
+		{
+			
+			ctx.strokeStyle= "#ae66b7";
+			
+			ctx.moveTo(0, 2);
+			ctx.lineWidth= 2;
+			ctx.lineTo(0, 20);
+		}
+		ctx.stroke();
+		ctx.restore();
+	}
+} 
+
+function drawClockHand(length, angle) 
+{
+	ctx.save();
+	ctx.beginPath();
+	ctx.translate(centerX, centerY);
+	ctx.lineCap= "round";
+	ctx.lineJoin="round";
+	var rotation=Math.PI * (angle - 180) / 180;
+	ctx.rotate(rotation);
+	ctx.moveTo(0, -40);
+	ctx.lineTo(0, length);
+	ctx.stroke();
+	ctx.restore();
+}
+
+function onDrawTime() 
+{
+	ClockFace();
+	var date= new Date();
+	var hours= date.getHours() % 12;
+	var minutes= date.getMinutes();
+	var seconds= date.getSeconds();
+	
+	ctx.strokeStyle= "#f4d442";//"rgb(0, 0, 255)";
+	ctx.lineWidth= 10;
+	drawClockHand(clockWidth / 2.5, (hours + (minutes / 60)) * 30);
+
+	ctx.strokeStyle= "#4865af";
+	ctx.lineWidth= 6;
+	drawClockHand(clockWidth / 2.2, minutes * 6);
+
+	ctx.strokeStyle= "#ae66b7";
+	ctx.lineWidth= 2;
+	drawClockHand(clockWidth/2, seconds * 6);
+}
+function ananlogClock() 
+{
+	canvas= document.getElementById("analog_clock");
+	clockWidth= Math.min(canvas.width, canvas.height) - 10;
+	ctx= canvas.getContext("2d");
+	centerX= canvas.width / 2;
+	centerY= canvas.height / 2;
+	ctx.lineCap= "round";
+	onDrawTime();
+	setInterval(onDrawTime, 1000);
+} // initializeClock()
+onload= ananlogClock;
+    </script>
+  </body>
+</html>

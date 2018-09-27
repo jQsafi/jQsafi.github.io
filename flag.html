@@ -24,76 +24,60 @@
       <div class="w3-row-padding">
 
         <!-- Left Column -->
-        <div class="w3-third">
-
-          <div class="w3-white w3-text-grey w3-card-4">
-            <div class="w3-display-container w3-animate-opacity"  id="top">
-
-              <img src="images/me.jpg" style="width:100%" alt="Avatar">
-              <div class="w3-display-bottomleft w3-container w3-text-orange ">
-                <h2 class="w3-lobster">Md. Shafayat Hossain</h2>
-              </div>
-            </div>
-            <div class="w3-container">
-              <p><i class="fa fa-star w3-spin fa-fw w3-margin-right w3-large w3-text-teal"></i>Programmer</p>
-              <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Dhaka, Bangladesh</p>
-              <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>amishafayat@gmail.com</p>
-              <p><i class="fa fa-skype fa-fw w3-margin-right w3-large w3-text-teal"></i>jqsafi</p>
-              <hr>
-
-              <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal w3-spin"></i>Skills</b></p>
-              <p>PHP</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
-              </div>
-              <p>CodeIgniter</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:85%">
-                  <div class="w3-center w3-text-white">85%</div>
-                </div>
-              </div>
-              <p>HTML</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
-              </div>
-              <p>CSS</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
-              </div>
-              <p>JavaScript</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
-              </div>
-              <p>jQuery</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:95%">95%</div>
-              </div>
-              <p>WordPress</p>
-              <div class="w3-light-grey w3-round-xlarge w3-small">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div>
-              </div>
-              <br>
-
-              <p class="w3-large w3-text-theme"><b><i class="fa fa-language fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
-              <p>Bangla</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:100%">100%</div>
-              </div>
-              <p>English</p>
-              <div class="w3-light-grey w3-round-xlarge">
-                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">70%</div>
-              </div>
-              <br>
-            </div>
-          </div><br>
-
-          <!-- End Left Column -->
-        </div>
+        <div class="w3-third" w3-include-html="left.html"></div>
 
         <!-- Right Column -->
         <div class="w3-twothird">
 
-          <img src="images/flag.svg" style="width:100%" alt="Avatar">
+          <svg height="600" width="1000"  viewbox="0,0 1000,600" xmlns="http://www.w3.org/2000/svg">
+<rect x="0" y="0" width="1000" height="600" stroke="#01796F"/>
+  <circle cx="450" cy="300" r="200" stroke="black" stroke-width="3"/>
+  <style>
+  svg
+  {
+    width: 100%;
+  }
+  svg rect {
+  stroke: #01796F;
+  stroke-width: 20px;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  fill: white;
+  animation: dash 10s, fill_rect 1s linear both 2s;
+}
+svg circle {
+  stroke: #E11837;
+  stroke-width: 10px;
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
+  animation: dash 10s linear both 3.2s, fill_circle 1s linear both 4.2s;
+}
+@keyframes dash {
+  from {
+    stroke-dashoffset: 10000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill_rect {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #01796F;
+  }
+}
+@keyframes fill_circle {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: #E11837;
+  }
+}
+  </style>
+</svg>
           
         </div>
 

@@ -30,7 +30,7 @@ BODY
   z-index: 9999;
   top: 0 !important;
 }
-svg {
+footer svg {
   display: block;
   font: 4em 'Lobster';
   width: 80%;
@@ -82,7 +82,7 @@ svg {
 }
 #category
 {
-  position: fixed;
+  position: absolute;
     top:105px;
   left:0;
   right:0;
@@ -125,7 +125,7 @@ span.char:hover
 {
   height:100px;
   width:100%;
-  position:fixed;
+  position:absolute;
   top:0;
   left: 0;
   right: 0;
@@ -137,3 +137,8 @@ span.char:hover
   text-align:center;
   resize: none;
 }
+canvas
+    {
+      width:70% !important;
+      transform: translate(15px);
+    }

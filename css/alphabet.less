@@ -1,0 +1,625 @@
+@border_color:rgba(99, 41, 147,1);
+@font_color:radial-gradient(circle at 0% 100%, rgba(99, 41, 147,.9), rgba(149, 41, 107,.6),rgba(9, 141, 147,.9),rgba(49, 11, 147,.2));
+@weight:5px;
+@height:50px;
+@width:50px;
+.border(@top,@right,@bottom,@left)
+{
+	border-style:solid;
+	border-width:@top @right @bottom @left;
+	background-image: linear-gradient(white, white), @font_color;
+  background-origin: border-box;
+background-clip: content-box, border-box;
+	border-color:rgba(99, 41, 147,.1);
+}
+.border-radius(@left-top,@right-top,@right-bottom,@left-bottom)
+{
+	border-radius:@left-top @right-top @right-bottom @left-bottom;
+}
+.default()
+{
+	content:"";
+	display:block;
+	width:100%;
+	height:100%;
+	line-height:0;
+	box-sizing: border-box;
+}
+.alphabet
+{
+	display:block;
+	float:left;
+	margin-left:10px;
+	margin-top:10px;
+	height:@height;
+	width:@width;
+	overflow:hidden;
+	box-sizing: border-box;
+}
+.A
+{
+	.border(@weight,@weight,0px,@weight);
+	.border-radius(50%,50%,20%,20%);
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(0,0,@weight,0);
+	}
+}
+.B
+{
+	.border(0,0,0,@weight);
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,@weight/2,0);
+		.border-radius(0,50%,50%,0);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(@weight/2, @weight,@weight,0);
+		.border-radius(0,50%,50%,0);
+	}
+}
+.C
+{
+	.border(@weight,0,@weight,@weight);
+	.border-radius(60%,30%,30%,60%);
+}
+.D
+{
+	.border(@weight,@weight,@weight,@weight);
+	.border-radius(0%,50%,50%,0%);
+}
+.E
+{
+	.border(@weight,0,@weight,@weight);
+	.border-radius(0%,10%,10%,0%);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:0%;
+		width:80%;
+		position:absolute;
+		.border(@weight,0px,0,0px);
+		top:50%;
+	}
+}
+.F
+{
+	.border(@weight,0,0,@weight);
+	border-bottom-color:transparent;
+	.border-radius(0%,10%,0%,0%);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:0;
+		width:80%;
+		position:absolute;
+		.border(0px,0px,@weight,0px);
+		top:40%;
+	}
+}
+.G
+{
+	.border(@weight,0,@weight,@weight);
+	.border-radius(50%,10%,0%,50%);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:50%;
+		width:60%;
+		.border(@weight,@weight,0px,0);
+		position:absolute;
+		bottom:0;
+		right:0;
+		.border-radius(50%,10%,0%,0%);
+	}
+}
+.H
+{
+	.border(0,@weight,0,@weight);
+	.border-radius(20%,20%,20%,20%);
+	position:relative;
+	&:before
+	{
+		.default;
+		position:absolute;
+		height:0;
+		.border(0px,0px,@weight,0px);
+		top:50%;
+	}
+}
+.I
+{
+	width:(@width/2);
+	.border(@weight,0,@weight,0);
+	.border-radius(10%,10%,10%,10%);
+	position:relative;
+	&:before
+	{
+		.default;
+		width:0;
+		.border(0,@weight,0,0px);
+		position:absolute;
+		top:0;bottom:0;
+		left:50%;
+		margin-left:-@weight/2;
+	}
+}
+.J
+{
+	.border(@weight,0,0,0);
+	.border-radius(10%,10%,0%,0%);
+	position:relative;
+	&:before
+	{
+		.default;
+		width:50%;
+		.border(0,@weight,@weight,0px);
+		.border-radius(0%,0%,50%,50%);
+		position:absolute;
+		top:0;bottom:0;
+		right:50%-@weight;
+	}
+}
+.K
+{
+	.border(0,0,0,@weight);
+	.border-radius(0%,0%,0%,0%);
+	overflow:hidden;
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(0,@weight,@weight,0);
+		.border-radius(0,0,100%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,0,0);
+		.border-radius(0,100%,0%,0%);
+	}
+}
+.L
+{
+	.border(0,0,@weight,@weight);	
+	.border-radius(20%,0%,20%,20%);
+}
+.M
+{
+	.border(0,@weight,0px,@weight);
+	.border-radius(20%,20%,20%,20%);
+	overflow:hidden;
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(0,@weight,@weight,@weight);
+		 .border-radius(0%,0%,50%,50%);
+	}
+}
+.N
+{
+	.border(0,0,0px,@weight);
+	.border-radius(20%,20%,20%,20%);
+	position:relative;
+	&:before
+	{
+		.default;
+		.border(0,@weight,@weight,@weight);
+		.border-radius(0,0,0%,100%);
+		position:relative;
+	}
+}
+.O
+{
+	.border(@weight,@weight,@weight,@weight);
+	.border-radius(45%,45%,45%,45%);
+	position:relative;
+}
+.P
+{
+	.border(0,0,0,@weight);
+	.border-radius(0,25%,0%,25%);
+	&:before
+	{
+		.default;
+		.border(@weight,@weight,@weight,0);
+		height:40%;
+		.border-radius(0,45%,45%,45%);
+	}
+}
+.Q
+{
+	.border(@weight,@weight,@weight,@weight);
+	.border-radius(45%,45%,45%,45%);
+	overflow:visible;
+	position:relative;
+	&:after
+	{
+		.default;
+		position:absolute;
+		.border(@weight,@weight,0,0);
+		 height:0%;
+		left:50%;
+		top:80%;
+		.border-radius(45%,45%,45%,45%);
+	}
+}
+.R
+{
+	.border(0,0,0,@weight);
+	.border-radius(0,0%,0%,25%);
+	position:relative;
+	&:before
+	{
+		.default;
+		.border(@weight,@weight,0,0);
+		height:40%;
+		.border-radius(0,45%,45%,0%);
+	}
+	&:after
+	{
+		.default;
+		.border(@weight,@weight,0,0);
+		height:60%;
+		.border-radius(15%,45%,15%,0%);
+	}
+}
+.S
+{
+	.border(0,0,0,0);
+	overflow:hidden;
+	//.border-radius(20%,50%,20%,50%);
+	&:before
+	{
+		.default;
+		height:50%;
+		//width:50%;
+		.border(@weight,0,@weight/2,@weight);
+		.border-radius(50%,0%,0%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(@weight/2,@weight,@weight,0);
+		.border-radius(0%,0%,50%,0%);
+	}
+}
+.T
+{
+	.border(@weight,0,0,0);
+	.border-radius(10%,10%,0%,0%);
+	position:relative;
+	&:before
+	{
+		.default;
+		width:0;
+		.border(0,@weight,0,0px);
+		position:absolute;
+		top:0;bottom:0;
+		left:50%;
+		margin-left:-(@weight/2);
+	}
+}
+.U
+{
+	.border(0,@weight,@weight,@weight);
+	.border-radius(0,0,45%,45%);
+}
+.V
+{
+	.border(0,@weight,@weight,@weight);
+	.border-radius(0,0,100%,0%);
+}
+.W
+{
+	.border(0,@weight,0,@weight);
+	transform:perspective(@width) rotatex(-10deg);
+	position:relative;
+	overflow:hidden;
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,0,@weight);
+		.border-radius(50%,50%,0%,0%);
+		position:absolute;
+		top:50%;
+	}
+}
+.X
+{
+	.border(0,0,0,0);
+	position:relative;
+	overflow:hidden;
+	&:before
+	{
+		.default;
+		width:0;
+		.border(0,@weight,0,0);
+		position:absolute;
+		top:0;
+		transform:skewX(30deg);
+		transform-origin:top left;
+	}
+	&:after
+	{
+		.default;
+		width:0%;
+		height:100%;
+		.border(0,0,0,@weight);
+		top:0;
+		transform:skewX(-30deg);
+		transform-origin:bottom right;
+	}
+}
+.Y
+{
+	.border(0,0,0,0);
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(0,@weight,@weight,@weight);
+		.border-radius(0,0%,50%,50%);
+	}
+	&:after
+	{
+		.default;
+		width:50%;
+		height:50%;
+		.border(0,@weight,0,0);
+		margin-left:@weight/2;
+	}
+}
+.Z
+{
+	.border(@weight,0,@weight,0);
+	overflow:hidden;
+	.border-radius(0%,00%,10%,0%);
+	&:before
+	{
+		.default;
+		.border(0,@weight,@weight,0);
+		.border-radius(0,0,150%,0%);
+	}
+}
+.number-1
+{
+	.border(0,@weight,0,0);
+	overflow:hidden;
+	.border-radius(0%,0%,0%,0%);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:50%;
+		width:50%;
+		float:right;
+		.border(@weight,0,0,0);
+		.border-radius(150%,0%,0%,0%);
+	}
+}
+.number-2
+{
+	position:relative;
+	&:after
+	{
+		.default;
+		height:20%;
+		.border(0,0,@weight,@weight);
+		.border-radius(0%,0%,0%,0%);
+	}
+	&:before
+	{
+		.default;
+		height:80%;
+		.border(@weight,@weight,@weight,0);
+		.border-radius(0%,50%,50%,0%);
+	}
+}
+.number-3
+{
+	.border(0,0,0,0);
+	overflow:hidden;
+	//.border-radius(30%,30%,10%,0%);
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,0,0);
+		.border-radius(50%,50%,50%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(0,@weight,@weight,0);
+		.border-radius(0%,50%,50%,50%);
+	}
+}
+.number-4
+{
+	.border(0,0,0,0);
+	//.border-radius(30%,30%,10%,0%);
+	.border(0,@weight,0,0);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:80%;
+		.border(0,0,@weight,@weight);
+		.border-radius(150%,0%,0%,10%);
+		transform:translatex(@weight);
+	}
+}
+.number-5
+{
+	.border(0,0,0,0);
+	//.border-radius(30%,30%,10%,0%);
+	.border(0,0,0,0);
+	position:relative;
+	&:before
+	{
+		.default;
+		height:30%;
+		.border(@weight,0,0,@weight);
+		.border-radius(0%,0%,0%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:70%;
+		.border(@weight,@weight,@weight,0);
+		.border-radius(0%,50%,50%,0%);
+	}
+}
+.number-6
+{
+	//.border(@weight,0,0,@weight);
+	//.border-radius(50%,0%,0%,0%);
+	&:before
+	{
+		.default;
+		height:40%;
+		.border(@weight,0,0,@weight);
+		.border-radius(60%,40%,0%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:60%;
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(0%,50%,50%,30%);
+	}
+}
+.number-7
+{
+	position:relative;
+	&:before
+	{
+		.default;
+		.border(@weight,@weight,@weight,0);
+	.border-radius(20%,0,100%,0%);
+		//.border-radius(0%,50%,50%,0%);
+	}
+	&:after
+	{
+		.default;
+		height:0%;
+		width:60%;
+		.border(@weight,0,0,0);
+	.border-radius(0%,0,0%,0%);
+		position:absolute;
+		bottom:50%;
+		right:0;
+	}
+}
+.number-8
+{
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(40%,40%,40%,40%);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(40%,40%,40%,40%);
+	}
+}
+.number-9
+{
+	&:before
+	{
+		.default;
+		height:50%;
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(40%,40%,0%,40%);
+	}
+	&:after
+	{
+		.default;
+		height:50%;
+		.border(0,@weight,@weight,0);
+		.border-radius(0%,0%,40%,40%);
+	}
+}
+.number-0
+{
+	&:before
+	{
+		.default;
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(40%,40%,40%,40%);
+	}
+}
+/*.X
+{
+	.border(0,0,0,0);
+	position:relative;
+	overflow:hidden;
+	height:@height;
+	width:@height;
+	&:before
+	{
+		.default;
+		transform: rotateZ(45deg);
+		.border(@weight,@weight,@weight,@weight);
+		.border-radius(0%,50%,50%,0%);
+		//position:absolute;
+		height:50%;
+	}
+	&:after
+	{
+		.default;
+	//	.border(@weight/4,@weight,0,@weight);
+		.border-radius(150%,150%,0%,0%);
+		position:absolute;
+		height:50%;
+		bottom:0;
+	}
+}*/
+// .S
+// {
+// 	.border(@weight,0,@weight,0);
+// 	.border-radius(0,50%,0%,50%);
+// 	position:relative;
+// 	overflow:hidden;
+// 	&:before
+// 	{
+// 		.default;
+// 		.border(0,@weight,@weight/4,@weight);
+// 		border-right-color:transparent;
+// 		.border-radius(0,0%,50%,50%);
+// 		position:absolute;
+// 		height:52%;
+// 		top:0;
+// 	}
+// 	&:after
+// 	{
+// 		.default;
+// 		.border(@weight/4,@weight,0,@weight);
+// 		border-left-color:transparent;
+// 		.border-radius(50%,50%,0%,0%);
+// 		position:absolute;
+// 		height:52%;
+// 		bottom:0;
+// 	}
+// }

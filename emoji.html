@@ -3,17 +3,37 @@
   <head>
     <meta charset="utf-8">
     <title>Emoji World </title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Shafayat Hossain, My Profile">
+  <meta name="author" content="Shafayat Hossain">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="https://www.w3schools.com/lib/w3.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <div class="w3-sidebar w3-bar-block w3-border-right w3-third" style="display:none" id="mySidebar" >
       <button onclick="w3_close()" class="w3-bar-item w3-large" style="cursor:pointer;">Close &times;</button>
-      <a href="#top" class="w3-bar-item w3-button">🏡 Home</a>
-      <a href="emoji.html" class="w3-bar-item w3-button">✌ Emoji World</a>
+       <div w3-include-html="nav.html"></div>
     </div>
+    <!-- Page Container -->
+    <button class="w3-button w3-teal w3-xlarge navigation_btn" onclick="w3_open()" style="">☰</button>
+    <div class="w3-content w3-margin-top" style="max-width:1400px;">
+      <!-- The Grid -->
+      <div class="w3-row-padding">
+
+        <!-- Left Column -->
+        <div class="w3-third" w3-include-html="left.html"></div>
+
+          
+
+          <!-- End Left Column -->
+        <div class="w3-twothird" style="position: relative;">
     <textarea class="" id="text"></textarea>
-    <div class="w3-container">
+    <div class="w3-container" style="position: relative;">
       <p class="" id="category">
         <span class="w3-tag w3-blue">Alphabets</span>
         <span class="w3-tag w3-teal">Arrows</span>
@@ -3405,7 +3425,14 @@
         </div>
       </div>
     </div>
+    </div>
+
+      <!-- End Page Container -->
+    </div>
+    <footer class="w3-container w3-teal w3-center w3-margin-top"  w3-include-html="footer.html">
+      
+    </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   
+   <script src="js/script.js"></script>
   </body>
 </html>
