@@ -1,0 +1,138 @@
+html,body,h1,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+BODY
+{
+  /*background-image: url('flag.svg');*/
+}
+.w3-lobster {
+  font-family: "Lobster", serif;
+}
+.w3-row-padding
+{
+  backface-visibility: visible;
+}
+.navigation_btn
+{
+  position:fixed;
+  z-index:999;
+  transform: translate(15px);
+  background-color: rgba(0, 150, 136,0.5) !important;
+}
+.navigation_btn:hover
+{
+  background-color: rgba(0, 150, 136,1) !important;
+}
+#category span
+{
+  cursor: pointer;
+}
+#mySidebar
+{
+  z-index: 9999;
+}
+svg {
+  display: block;
+  font: 4em 'Lobster';
+  width: 80%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 14%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+  stroke: #FFFFFF;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+  stroke: #0f3e89;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+  stroke: #f92a46;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+.text-copy:nth-child(6){
+  stroke: #FF80AD;
+  animation-delay: -5s;
+}
+@keyframes stroke-offset{
+  100% {
+    stroke-dashoffset: -20%;
+  }
+}
+#category
+{
+  position: fixed;
+    top:105px;
+  left:0;
+  right:0;
+}
+#category span
+{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+[data-category]:not(:first-child)
+{
+  display: none
+}
+#emoji
+{
+  height: calc(100%-180px);
+  margin:0 auto;
+  margin-top:180px;
+  width:90%;
+}
+span.char
+{
+  display:block;
+  float:left;
+  height:79px;
+  width:79px;
+  font: 68px / 83px Helvetica, Arial, Sans-serif;
+  color: black;
+  outline: 0;
+  border:dashed 1px rgba(0,0,0,0.5);
+  transform:scale(0.5);
+  text-align:center;
+  cursor:pointer;
+}
+span.char:hover
+{
+  border:solid 2px rgba(0,0,0,0.8);
+}
+#text
+{
+  height:100px;
+  width:100%;
+  position:fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  border: none;
+  background-color:tomato;
+  color:white;
+  font: 68px / 83px Helvetica, Arial, Sans-serif;
+  z-index:9998;
+  text-align:center;
+  resize: none;
+}
