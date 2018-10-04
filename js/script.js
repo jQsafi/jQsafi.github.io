@@ -33,6 +33,10 @@ $(function()
     var successful = document.execCommand('copy'); 
     ta.remove();
   });
+      // $('img').rgbaClick(function(e)
+      // {
+      //   console.log(e.rgb) // 4 element "array".
+      // });
 });
 var lastFocused=$("#text")[0];
 $("#text").focus(function() {
@@ -72,3 +76,4 @@ function insertText(text) {
   }
   input.scrollTop = scrollPos;
 }
+  
