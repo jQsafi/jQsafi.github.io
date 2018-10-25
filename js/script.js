@@ -20,9 +20,7 @@ $(function()
     });
   });
   $("body").find(".char").click(function()
-                                {
-    //var entity=$(this).data("entity");
-    //if(entity=="N/A")
+  {
     entity=$(this).text();
     entity=$.trim(entity);
     insertText(entity);
@@ -33,10 +31,6 @@ $(function()
     var successful = document.execCommand('copy'); 
     ta.remove();
   });
-      // $('img').rgbaClick(function(e)
-      // {
-      //   console.log(e.rgb) // 4 element "array".
-      // });
 });
 var lastFocused=$("#text")[0];
 $("#text").focus(function() {
@@ -76,4 +70,3 @@ function insertText(text) {
   }
   input.scrollTop = scrollPos;
 }
-  

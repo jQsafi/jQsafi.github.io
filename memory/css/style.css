@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Black+And+White+Picture');
+body,button
+{
+  padding: 0;
+  margin: 0 auto;
+}
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  min-height: 100px;
+  height: auto;
+  box-sizing: border-box;
+  align-content: center;
+  list-style: none;
+  grid-gap: 2px;
+  padding: 0;
+  cursor: url(heart.png),auto;
+}
+.game-grid-item {
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Black And White Picture', sans-serif;
+  font-size: 100px;
+  height: 100px;
+  line-height: 100px;
+  background: linear-gradient(45deg, #ff8cbf, #e5247a);
+  color: #fff;
+  border-radius: 5px;
+}
+
+.closed {
+  color: transparent;
+}
