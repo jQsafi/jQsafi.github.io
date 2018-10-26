@@ -99,7 +99,7 @@ function close_the_btn(timing_ms)
 			$("#btn").html("Start Level "+level);
 			setTimeout(function()
 			{
-				if(confirm("Level-"+level-1+" is cleared.Want to play next level?"))
+				if(confirm("Level "+(level-1)+" is cleared.Want to play next level?"))
 				{
 					arrange_game(level);
 				}
