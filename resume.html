@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume - Shafayat Hossain</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header, footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+
+    nav {
+      background: #444;
+      color: #fff;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      display: inline;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      display: inline-block;
+    }
+
+    nav ul li a:hover {
+      background: #555;
+    }
+
+    section {
+      padding: 2rem;
+      background: #fff;
+      margin: 1rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 800px;
+    }
+
+    h1, h2 {
+      color: #444;
+    }
+
+    footer {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shafayat Hossain</h1>
+    <p>Senior Software Engineer | Dhaka, Bangladesh</p>
+    <p>Email: <a href="mailto:shafayat@engineer.com">shafayat@engineer.com</a> | Phone: +880 1616-332313</p>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
+  </nav>
+
+  <section id="summary">
+    <h2>Summary</h2>
+    <p>Highly skilled Senior Software Engineer with 12+ years of experience specializing in backend development, API integration, and database management. Proven expertise in PHP frameworks, Python, and embedded systems.</p>
+  </section>
+
+  <section id="skills">
+    <h2>Core Competencies</h2>
+    <ul>
+      <li>Backend Development (PHP, Python)</li>
+      <li>API Development and Integration</li>
+      <li>Database Management (Oracle, MySQL, SQLite)</li>
+      <li>Embedded Systems (Raspberry Pi)</li>
+      <li>Web Scraping and Data Analysis</li>
+      <li>IoT Solutions</li>
+      <li>WHMCS and WordPress Development</li>
+    </ul>
+  </section>
+
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <h3>Senior Software Engineer | Arogga.com | July 2020 - Present</h3>
+    <ul>
+      <li>Spearhead backend development, API integration, and database management.</li>
+      <li>Engineered high-performance systems with PHP (Symfony, Laravel) and Python.</li>
+      <li>Developed IoT solutions with Raspberry Pi and enhanced image processing using OpenCV.</li>
+    </ul>
+    <h3>Software Developer & QA Analyst | Enormous Infonet | June 2018 - June 2020</h3>
+    <ul>
+      <li>Designed robust applications using PHP, WordPress, and CodeIgniter.</li>
+      <li>Managed database design and implementation with Oracle and MySQL.</li>
+    </ul>
+    <!-- Add more experience here -->
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <p>B.Sc. in Computer Science and Engineering | Uttara University | 2012</p>
+    <p>Higher Secondary School Certificate | KG College | 2007</p>
+    <p>Secondary School Certificate | Telihaty High School | 2005</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Shafayat Hossain</p>
+  </footer>
+
+  <script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('#navbar a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        document.getElementById(targetId).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+</html>
