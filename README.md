@@ -1,48 +1,52 @@
-# jQsafi.github.io
+# Interactive Portfolio
 
-This repository hosts the personal website of [jQsafi](https://github.com/jQsafi).
+Welcome to my interactive portfolio! This project showcases my skills, projects, and creative experiments. Explore the various sections to learn more about my work.
 
-## Description
+## Table of Contents
 
-This is a static website created using HTML, JavaScript, Less, and CSS. The website is hosted on GitHub Pages and serves as a personal portfolio and blog.
+- [About Me](#about-me)
+- [Projects](#projects)
+- [Skills](#skills)
+- [Contact](#contact)
 
-## Installation
+## About Me
 
-To run this project locally, follow these steps:
+I am a passionate developer with a knack for creating interactive and visually appealing web applications. My portfolio is a reflection of my journey in web development, featuring projects that highlight my expertise in HTML, CSS, JavaScript, and more.
+Portfolio: 
+   - [Portfolio](/PortFolio/index.html)
+## Projects
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/jQsafi/jQsafi.github.io.git
-   ```
+Here are some of the key projects featured in this portfolio:
 
-2. Navigate to the project directory:
-   ```bash
-   cd jQsafi.github.io
-   ```
+1. **Memory Game**: A fun and interactive memory game built with JavaScript.
+   - [Play the Game](../memory/index.html)
 
-## Usage
+2. **3D CSS Box**: A demonstration of 3D effects using CSS.
+   - [View Project](../3d-css-box/index.html)
 
-Open the `index.html` file in your preferred web browser to view the website locally.
+3. **CSS Circle Clock**: A creative clock design using CSS.
+   - [View Project](../css-circle-clock/index.html)
 
-## Contributing
+4. **Gallery**: An image gallery with interactive features.
+   - [Explore Gallery](../gallery/index.html)
 
-Contributions are welcome! If you have any suggestions or improvements, please create an issue or submit a pull request.
+5. **Resume**: My professional resume in an interactive format.
+   - [View Resume](../resume.html)
 
-1. Fork the repository.
-2. Create a new branch:
-   ```bash
-   git checkout -b feature-branch
-   ```
-3. Make your changes and commit them:
-   ```bash
-   git commit -m 'Add some feature'
-   ```
-4. Push to the branch:
-   ```bash
-   git push origin feature-branch
-   ```
-5. Open a pull request.
+## Skills
 
-## License
+- **Frontend Development**: HTML, CSS, JavaScript, Vue.js
+- **Design Tools**: Adobe Photoshop, Figma
+- **Version Control**: Git, GitHub
 
-This project is licensed under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
+## Contact
+
+Feel free to reach out to me for collaborations or inquiries:
+
+- **Email**: [your-email@example.com](mailto:your-email@example.com)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
+- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
+
+---
+
+Thank you for visiting my portfolio!
