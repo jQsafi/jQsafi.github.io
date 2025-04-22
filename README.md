@@ -43,9 +43,28 @@ Here are some of the key projects featured in this portfolio:
 
 Feel free to reach out to me for collaborations or inquiries:
 
-- **Email**: [your-email@example.com](mailto:your-email@example.com)
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/your-profile)
-- **GitHub**: [Your GitHub Profile](https://github.com/your-profile)
+- **Email**: [your-email@example.com](mailto:shafayat@engineer.com)
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/jqsafi)
+- **GitHub**: [Your GitHub Profile](https://github.com/jqsafi)
+
+<style>
+        .libutton {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 7px;
+          text-align: center;
+          outline: none;
+          text-decoration: none !important;
+          color: #ffffff !important;
+          width: 200px;
+          height: 32px;
+          border-radius: 16px;
+          background-color: #0A66C2;
+          font-family: "SF Pro Text", Helvetica, sans-serif;
+        }
+      </style>
+<a class="libutton" href="https://www.linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=jqsafi" target="_blank">Follow on LinkedIn</a>
 
 ---
 
