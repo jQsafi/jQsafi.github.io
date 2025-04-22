@@ -33,12 +33,6 @@
                     Write appropriate promt and , get personalized responses
                 </p>
             </div>
-            <button aria-label="Close" class="text-gray-600 hover:text-gray-900 transition-colors duration-150">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
         </header>
 
         <form class="px-8 py-6 space-y-8">
@@ -47,13 +41,12 @@
                     promt</label>
                 <input id="name" type="text"
                     class="w-full rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 text-sm leading-5 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                    autocomplete="off" spellcheck="false" />
+                    autocomplete="off" spellcheck="false" placeholder="Name your promt (e.g., Blog Post, Chatbot Query)" />
             </div>
 
             <div>
-                <label for="occupation" class="block text-gray-900 font-semibold text-sm mb-2 leading-5">What do you
-                    do?</label>
-                <input id="occupation" type="text" placeholder="Engineer, student, etc."
+                <label for="occupation" class="block text-gray-900 font-semibold text-sm mb-2 leading-5"> Mention model if you have preffered one</label>
+                <input id="occupation" type="text" placeholder="llma:3.2, gemin-mini-0 (e.g., GPT-4, BERT)"
                     class="w-full rounded-lg border border-gray-300 text-gray-900 placeholder-gray-400 text-sm leading-5 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     autocomplete="off" spellcheck="false" />
             </div>
@@ -61,7 +54,7 @@
             <div>
                 <label for="traits"
                     class="block text-gray-900 font-semibold text-sm mb-2 leading-5 flex items-center gap-1">
-                    Mention model if you have preffered one?
+                   Describe your task
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-gray-400" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                         <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
@@ -69,7 +62,7 @@
                             stroke-width="2" />
                     </svg>
                 </label>
-                <textarea id="traits" rows="5" placeholder="Describe or select traits"
+                <textarea id="traits" rows="5" placeholder="Describe or select traits (e.g., Creative, Analytical)"
                     class="w-full rounded-lg border border-gray-300 text-gray-400 text-sm leading-5 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     spellcheck="false"></textarea>
 
@@ -132,7 +125,7 @@
                             stroke-width="2" />
                     </svg>
                 </label>
-                <textarea id="additional" rows="5" placeholder="Interests, values, or preferences to keep in mind"
+                <textarea id="additional" rows="5" placeholder="Interests, values, or preferences to keep in mind (e.g., Formal tone, Humor)"
                     class="w-full rounded-lg border border-gray-300 text-gray-400 text-sm leading-5 px-4 py-3 resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     spellcheck="false"></textarea>
             </div>
