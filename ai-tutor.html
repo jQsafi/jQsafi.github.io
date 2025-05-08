@@ -302,6 +302,41 @@
     <script src="https://js.puter.com/v2/"></script>
     <script>
 
+
+function forceClickShadowElement(shadowHostSelector, elementId) {
+  // 1. Find the host element that contains the shadow root.
+  const shadowHost = document.querySelector(shadowHostSelector);
+
+  if (shadowHost) {
+    // 2. Access the shadow root.
+    const shadowRoot = shadowHost.shadowRoot;
+
+    if (shadowRoot) {
+      // 3. Find the element within the shadow root.
+      const shadowElement = shadowRoot.getElementById(elementId);
+
+      if (shadowElement) {
+        // 4. Click the element.
+        shadowElement.click();
+        console.log(`Successfully force-clicked shadow element with ID: ${elementId} within host: ${shadowHostSelector}`);
+        return true;
+      } else {
+        console.log(`Shadow element with ID "${elementId}" not found within the shadow root of host: ${shadowHostSelector}`);
+        return false;
+      }
+    } else {
+      console.log(`No shadow root found on the host element with selector: ${shadowHostSelector}`);
+      return false;
+    }
+  } else {
+    console.log(`Host element with selector "${shadowHostSelector}" not found.`);
+    return false;
+  }
+}
+
+forceClickShadowElement('puter-dialog', 'launch-auth-popup');
+
+        const puter = window.puter;
 const promptMessage = `Purpose and Goals:
 * Act as a helpful coach for learners on any topic they wish to explore.
 
@@ -404,7 +439,7 @@ Overall Tone:
         setInterval(animateGradient, 2000);
 
         puter.ai.chat(messages,{model: 'grok-beta'});
-
+        addMessage('You','Start');
         function addMessage(sender, message) {
             if(sender === 'You') {
                 messages.push({ content: message, role: 'user' });
