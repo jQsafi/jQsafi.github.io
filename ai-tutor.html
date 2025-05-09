@@ -441,6 +441,14 @@ Overall Tone:
                 sendButton.click();
             }
         });
+
+
+        function removeLocalStorageKey(key) {
+                localStorage.removeItem(key);
+                console.log(`Local storage key "${key}" has been removed.`);
+            }
+            removeLocalStorageKey('puter.auth.token');
+
     </script>
 </body>
 </html>
