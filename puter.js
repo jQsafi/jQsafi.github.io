@@ -7571,7 +7571,7 @@
                     } else if ("web" === this.env) {
                         this.initSubmodules();
                         try {
-                            this.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJWeEoyUTAvZFM5YURLLzhqZVdBaDBnPT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0Njc0MDY0MH0.Tl-JK0ogOXajFrNlgH6Pz0vpvLEMlP9ZTQvJSrtX6_A"),
+                            this.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dSI6Imcrc0dpOUxqUUhtM0hNR05DcVRQcFE9PSIsImF1IjoiSE0xbzIrVlRWMm1QRDd5bWpFdHhhUT09IiwicyI6IkNRdUhmNWVrM211TFFxRUJEMmFybWc9PSIsImlhdCI6MTc0Njc1NjMyM30.S3jP8XpFlkVgMCEk1XfI1R6QbbLBQVHlTxKLYK7BXVw"),
                             this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)

@@ -300,6 +300,7 @@
         </div>
     </div>
     <script src="puter.js"></script>
+    <!-- <script src="https://js.puter.com/v2"></script> -->
     <script>
 
         const puter = window.puter;
@@ -372,8 +373,7 @@ Overall Tone:
         const chatMessages = document.getElementById('chat-messages');
         const messageInput = document.getElementById('message-input');
         const sendButton = document.getElementById('send-button');
-        const yesButton = document.getElementById('yes-button');
-        const noButton = document.getElementById('no-button');
+
 
         const gradients = [
             { start: '#b0e0e6', end: '#87cefa' },  // Light Blue
@@ -404,12 +404,12 @@ Overall Tone:
         animateGradient();
         setInterval(animateGradient, 2000);
 
-        puter.ai.chat(messages,{model: 'grok-beta'});
+        puter.ai.chat(messages);
         addMessage('You','Start');
         function addMessage(sender, message) {
             if(sender === 'You') {
                 messages.push({ content: message, role: 'user' });
-                puter.ai.chat(messages,{model: 'grok-beta'}).then(response => {
+                puter.ai.chat(messages).then(response => {
                     addMessage('Tutor', response.message);
                 }).catch(error => {
                     console.error("AI response error:", error);
@@ -426,6 +426,7 @@ Overall Tone:
             messageElement.innerHTML = `<div class="markdown-body">${html}</div>`;
             chatMessages.appendChild(messageElement);
             chatMessages.scrollTop = chatMessages.scrollHeight;
+            messageInput.focus();
         }
         sendButton.addEventListener('click', () => {
             const message = messageInput.value.trim();
