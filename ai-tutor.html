@@ -293,9 +293,47 @@
                 border: none;
             }
         }
+        #help-fab {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 56px;
+  height: 56px;
+  background-color: #4285F4;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#help-tooltip {
+  position: fixed;
+  bottom: 5.5rem;
+  right: 1.5rem;
+  background-color: #fff;
+  color: #333;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  display: none;
+  z-index: 1000;
+  font-size: 0.95rem;
+}
     </style>
 </head>
 <body class="container">
+    <!-- Floating Help Button -->
+<div id="help-fab" title="Need help?" onclick="toggleHelpTooltip()">
+    <span class="material-icons">help_outline</span>
+  </div>
+  <div id="help-tooltip">
+    This is implementation of prompt. Also hacked version of puter js.!
+  <a href="#" class="contrast" onclick="event.preventDefault;click">Click here</a> to copy the promp
+  </div>
     <div class="chat-container">
         <div class="chat-header">
             <h1 class="logo-txt">AI Tutor</h1>
@@ -304,7 +342,7 @@
         <div id="chat-messages" class="chat-messages">
         </div>
         <div class="chat-input-area">
-            <input type="text" id="message-input" placeholder="Say hello or anything to start" />
+            <input type="text" id="message-input" placeholder="Say hello or anything to start" tabindex="0" />
             <button id="send-button">
                 <i class="material-icons">send</i>
             </button>
@@ -385,7 +423,7 @@ Overall Tone:
         const chatMessages = document.getElementById('chat-messages');
         const messageInput = document.getElementById('message-input');
         const sendButton = document.getElementById('send-button');
-
+messageInput.focus();
 
         const gradients = [
             { start: '#b0e0e6', end: '#87cefa' },  // Light Blue
@@ -469,7 +507,24 @@ Overall Tone:
                 console.log(`Local storage key "${key}" has been removed.`);
             }
             removeLocalStorageKey('puter.auth.token');
-
+            function toggleHelpTooltip() {
+    const tooltip = document.getElementById('help-tooltip');
+    tooltip.style.display = tooltip.style.display === 'block' ? 'none' : 'block';
+}
+function copyPromptToClipboard() {
+    navigator.clipboard.writeText(promptMessage)
+        .then(() => {
+            const tooltip = document.getElementById('help-tooltip');
+            prevHtml = tooltip.innerHTML;
+            tooltip.innerText = '✅ Prompt copied!';
+            setTimeout(() => {
+                tooltip.innerHTML = prevHtml;
+            }, 2000);
+        })
+        .catch(err => {
+            console.error('Clipboard error:', err);
+        });
+}
     </script>
 </body>
 </html>
