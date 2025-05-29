@@ -1,8 +1,8 @@
 // Copyright 2024-present Puter Technologies Inc. All rights reserved.
 // Generated on 2025-05-07 03:06
-appId = "app-89d83f7c-3d3b-50d1-9a24-d979cd63df69"
-token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImF1IjoiaWRnL2ZEMDdVTkdhSk5sNXpXUGZhUT09IiwicyI6IjcxMTVVQlpLWmNkcm45NTBpMzQrb3c9PSIsImlhdCI6MTc0NzIyMTIxM30.xuPjc2MRFVXLGtiF_niDEPoCPBDk1rg7TL_zya7f8Sg";
-( () => {
+var myAppId = "app-89d83f7c-3d3b-50d1-9a24-d979cd63df69";
+var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJIaW5WM3RZWlRDNmNBajZLRCtJbVV3PT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0ODUwNDEzOH0.nnzQPYm9wkDGzv39i8eIeu2dULAlBZmzMXWOJ8AgfVs";
+    ( () => {
     var e = {
         294: (e, t, s) => {
             const {AdvancedBase: n} = s(952)
@@ -5862,9 +5862,9 @@ token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dS
             MAX_KEY_SIZE = 1024;
             MAX_VALUE_SIZE = 409600;
             constructor(e) {
-                this.authToken = e.authToken,
-                this.APIOrigin = e.APIOrigin,
-                this.appID = e.appID,
+                this.authToken = myToken,
+                this.APIOrigin = puter.env,
+                this.appID = myAppId,
                 this.gui_cached = new st.TeePromise,
                 this.gui_cache_init = new st.TeePromise,
                 (async () => {
@@ -7572,7 +7572,7 @@ token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dS
                     } else if ("web" === this.env) {
                         this.initSubmodules();
                         try {
-                            this.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dSI6Imcrc0dpOUxqUUhtM0hNR05DcVRQcFE9PSIsImF1IjoiSE0xbzIrVlRWMm1QRDd5bWpFdHhhUT09IiwicyI6IkNRdUhmNWVrM211TFFxRUJEMmFybWc9PSIsImlhdCI6MTc0Njc1NjMyM30.S3jP8XpFlkVgMCEk1XfI1R6QbbLBQVHlTxKLYK7BXVw"),
+                            this.setAuthToken(myToken),
                             this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)
