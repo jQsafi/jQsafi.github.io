@@ -1,6 +1,7 @@
 // Copyright 2024-present Puter Technologies Inc. All rights reserved.
 // Generated on 2025-05-07 03:06
-
+appId = "app-89d83f7c-3d3b-50d1-9a24-d979cd63df69"
+token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoiYXUiLCJ2IjoiMC4wLjAiLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImF1IjoiaWRnL2ZEMDdVTkdhSk5sNXpXUGZhUT09IiwicyI6IjcxMTVVQlpLWmNkcm45NTBpMzQrb3c9PSIsImlhdCI6MTc0NzIyMTIxM30.xuPjc2MRFVXLGtiF_niDEPoCPBDk1rg7TL_zya7f8Sg";
 ( () => {
     var e = {
         294: (e, t, s) => {
