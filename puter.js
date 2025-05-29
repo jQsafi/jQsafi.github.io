@@ -5863,7 +5863,7 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
             MAX_VALUE_SIZE = 409600;
             constructor(e) {
                 this.authToken = myToken,
-                this.APIOrigin = puter.env,
+                this.APIOrigin = 'gui,
                 this.appID = myAppId,
                 this.gui_cached = new st.TeePromise,
                 this.gui_cache_init = new st.TeePromise,
