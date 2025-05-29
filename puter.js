@@ -7564,8 +7564,8 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
                         this.authToken = decodeURIComponent(s.get("puter.auth.token")),
                         this.initSubmodules();
                         try {
-                            lthis.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJWeEoyUTAvZFM5YURLLzhqZVdBaDBnPT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0Njc0MDY0MH0.Tl-JK0ogOXajFrNlgH6Pz0vpvLEMlP9ZTQvJSrtX6_A"),
-                            this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
+                            lthis.setAuthToken(myToken),
+                            this.setAppID(myAppId)
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)
                         }
@@ -7573,7 +7573,7 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
                         this.initSubmodules();
                         try {
                             this.setAuthToken(myToken),
-                            this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
+                            this.setAppID(myAppId)
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)
                         }
