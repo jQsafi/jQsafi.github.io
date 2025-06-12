@@ -1,8 +1,7 @@
 // Copyright 2024-present Puter Technologies Inc. All rights reserved.
 // Generated on 2025-05-07 03:06
-var myAppId = "app-89d83f7c-3d3b-50d1-9a24-d979cd63df69";
-var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJIaW5WM3RZWlRDNmNBajZLRCtJbVV3PT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0ODUwNDEzOH0.nnzQPYm9wkDGzv39i8eIeu2dULAlBZmzMXWOJ8AgfVs";
-    ( () => {
+
+( () => {
     var e = {
         294: (e, t, s) => {
             const {AdvancedBase: n} = s(952)
@@ -4828,7 +4827,7 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
                 let s;
                 super(),
                 this.attachShadow({
-                    mode: "open"
+                    mode: "closed"
                 }),
                 this.reject = t,
                 this.resolve = e,
@@ -5862,9 +5861,9 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
             MAX_KEY_SIZE = 1024;
             MAX_VALUE_SIZE = 409600;
             constructor(e) {
-                this.authToken = myToken,
+                this.authToken = e.authToken,
                 this.APIOrigin = e.APIOrigin,
-                this.appID = myAppId,
+                this.appID = e.appID,
                 this.gui_cached = new st.TeePromise,
                 this.gui_cache_init = new st.TeePromise,
                 (async () => {
@@ -7564,16 +7563,16 @@ var myToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIs
                         this.authToken = decodeURIComponent(s.get("puter.auth.token")),
                         this.initSubmodules();
                         try {
-                            lthis.setAuthToken(myToken),
-                            this.setAppID(myAppId)
+                            lthis.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJWeEoyUTAvZFM5YURLLzhqZVdBaDBnPT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0Njc0MDY0MH0.Tl-JK0ogOXajFrNlgH6Pz0vpvLEMlP9ZTQvJSrtX6_A"),
+                            this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)
                         }
                     } else if ("web" === this.env) {
                         this.initSubmodules();
                         try {
-                            this.setAuthToken(myToken),
-                            this.setAppID(myAppId)
+                            this.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0IjoicyIsInYiOiIwLjAuMCIsInUiOiJWeEoyUTAvZFM5YURLLzhqZVdBaDBnPT0iLCJ1dSI6IkoyMU1Wdk05UXFPeTdaaThLVEJzVFE9PSIsImlhdCI6MTc0Njc0MDY0MH0.Tl-JK0ogOXajFrNlgH6Pz0vpvLEMlP9ZTQvJSrtX6_A"),
+                            this.setAppID("app-b82ee255-d1c4-4c6e-bb93-f9d5cead9ed5")
                         } catch (e) {
                             console.error("Error accessing localStorage:", e)
                         }
