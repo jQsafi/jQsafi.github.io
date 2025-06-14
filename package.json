@@ -1,5 +1,5 @@
 {
-  "name": "temp-react-app",
+  "name": "shafayat-portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,7 +10,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^5.0.3"
   },
-  "homepage": "https://jqsafi.github.io/temp-react-app",
+  "homepage": "https://jqsafi.github.io/",
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
