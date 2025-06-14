@@ -1,16 +1,21 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "ShafayatPortfolio",
+  "name": "Shafayat Hossain Portfolio",
   "icons": [
     {
-      "src": "logo192.png",
-      "sizes": "192x192",
-      "type": "image/png"
+      "src": "https://jqsafi.github.io/public-files/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
     },
     {
-      "src": "logo512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "https://jqsafi.github.io/public-files/logo.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://jqsafi.github.io/public-files/logo.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
