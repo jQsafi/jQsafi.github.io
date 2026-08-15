@@ -241,15 +241,46 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
     return "Thanks for your message! Shafayat specializes in AI Prompt Engineering, Web Development, and Web Scraping. Feel free to leave your contact details or email him directly at shafayat@engineer.com.";
   }
 
+  function renderSuggestions() {
+    const existing = document.getElementById('chatSuggestions');
+    if (existing) existing.remove();
+
+    const suggestionsDiv = document.createElement('div');
+    suggestionsDiv.id = 'chatSuggestions';
+    suggestionsDiv.className = 'chat-suggestions';
+
+    const chips = [
+      { label: '💼 Skills & Experience', prompt: 'Tell me about your experience and skills' },
+      { label: '🚀 Recent Projects', prompt: 'What projects have you worked on?' },
+      { label: '✉️ Get in Touch', prompt: 'How can I contact or hire you?' },
+      { label: '🛠️ Hardware & IoT', prompt: 'Tell me about your hardware and IoT innovations' }
+    ];
+
+    chips.forEach(chipInfo => {
+      const btn = document.createElement('button');
+      btn.className = 'chip-btn';
+      btn.setAttribute('data-prompt', chipInfo.prompt);
+      btn.textContent = chipInfo.label;
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+        handleSendMessage(chipInfo.prompt);
+      });
+      suggestionsDiv.appendChild(btn);
+    });
+
+    chatMessages.appendChild(suggestionsDiv);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
   async function handleSendMessage(text) {
     if (!text.trim()) return;
 
+    const existing = document.getElementById('chatSuggestions');
+    if (existing) existing.remove();
+
     appendMessage(text, 'user');
     chatInput.value = '';
-
-    if (chatSuggestions) {
-      chatSuggestions.remove();
-    }
 
     showTypingIndicator();
 
@@ -257,9 +288,11 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
       const reply = await generateAutoReply(text);
       removeTypingIndicator();
       appendMessage(reply, 'assistant');
+      renderSuggestions();
     } catch (e) {
       removeTypingIndicator();
       appendMessage("Thanks for your message! Feel free to reach out to Shafayat directly at shafayat@engineer.com.", 'assistant');
+      renderSuggestions();
     }
   }
 
@@ -268,7 +301,7 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
     handleSendMessage(chatInput.value);
   });
 
-  // Handle Quick Suggestion Chip Clicks
+  // Attach event listeners to initial suggestion chips
   document.querySelectorAll('.chip-btn').forEach((chip) => {
     chip.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -279,5 +312,5 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
       }
     });
   });
-
 });
+
