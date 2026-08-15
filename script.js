@@ -118,11 +118,12 @@ document.addEventListener('DOMContentLoaded', () => {
         console.warn('Marked parse error:', e);
       }
     }
-    // Fallback simple renderer
+    // Fallback simple renderer with auto-link detection
     return text
       .replace(/&/g, "&amp;")
       .replace(/</g, "&lt;")
       .replace(/>/g, "&gt;")
+      .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>')
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
       .replace(/`(.*?)`/g, '<code>$1</code>')
@@ -138,9 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (sender === 'assistant') {
       contentDiv.innerHTML = formatMarkdown(text);
+      // Ensure every link provided by AI opens in a new window
+      contentDiv.querySelectorAll('a').forEach(link => {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      });
     } else {
       contentDiv.textContent = text;
     }
+
 
     const timeSpan = document.createElement('span');
     timeSpan.className = 'message-time';
