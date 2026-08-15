@@ -197,11 +197,11 @@ Source of Truth Profile:
 - AI & Automation: Ollama, LM Studio, Local LLMs, Chrome Built-in AI, PuterAI, OpenWebUI, Groq, Selenium, Pytest, IoT/Hardware integration
 - Management: Agile (Scrum), Kanban, SAFe, ERP integration, OKRs, Stakeholder Communication
 - Recent Innovative Tasks & Projects:
-  • AiTomo (Chat Smarter, Chat Together): https://jqsafi.github.io/ai/
-  • HBD Maisara: https://jqsafi.github.io/hbd-maisara/
-  • Zahid Hasan Portfolio: https://jqsafi.github.io/zahid-hasan/
-  • Dr SM Rafiqul Islam MP: https://drsmrafiqulislammp.info/
-  • Arogga Healthcare Platform: http://arogga.com/
+  • AiTomo - Chat Smarter, Chat Together: https://jqsafi.github.io/ai/
+  • Arogga – Buy Medicine, Beauty & Healthcare Products Online in Bangladesh: http://arogga.com/
+  • ড. এস. এম. রফিকুল ইসলাম বাচ্চু - উন্নয়ন ও সংগ্রামের প্রতিচ্ছবি | অফিশিয়াল ওয়েবসাইট: https://drsmrafiqulislammp.info/
+  • জাহিদ হাসান | অফিসিয়াল ডিজিটাল পোর্টফোলিও ও আর্কাইভ: https://jqsafi.github.io/zahid-hasan/
+  • Happy 4th Birthday, Maisara! 🎂🎉: https://jqsafi.github.io/hbd-maisara/
 - Career Highlights:
   • Arogga Ltd. (2020–Present): Senior Software Engineer. Automated workflows (reduced overhead by 65%), built 15+ microservices with 99.9% uptime for 500K+ daily requests, integrated IoT inventory tracking, improved latency by 20–30%.
   • Enormous Infonet (2018–2020): Automated 10M+ records (cut reporting time by 70%), built CI/CD pipelines reducing release time from 4h to 30m.
@@ -242,8 +242,9 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
       return "Shafayat is a Senior Software Engineer & AI Specialist skilled in Prompt Engineering, NodeJS, ReactJS, Python, Kubernetes, Web Scraping, Laravel, and WordPress!";
     }
     if (query.includes('project') || query.includes('work') || query.includes('portfolio') || query.includes('innovative') || query.includes('task')) {
-      return "Shafayat's recent innovative tasks include [AiTomo - Chat Smarter](https://jqsafi.github.io/ai/), [Arogga Platform](http://arogga.com/), [Dr SM Rafiqul Islam MP Portal](https://drsmrafiqulislammp.info/), [Zahid Hasan Portfolio](https://jqsafi.github.io/zahid-hasan/), and [HBD Maisara](https://jqsafi.github.io/hbd-maisara/). Explore them in the top-left menu!";
+      return "Shafayat's recent innovative tasks include:\n- [AiTomo - Chat Smarter, Chat Together](https://jqsafi.github.io/ai/)\n- [Arogga – Buy Medicine & Healthcare Products Online](http://arogga.com/)\n- [ড. এস. এম. রফিকুল ইসলাম বাচ্চু - অফিশিয়াল ওয়েবসাইট](https://drsmrafiqulislammp.info/)\n- [জাহিদ হাসান | অফিসিয়াল ডিজিটাল পোর্টফোলিও ও আর্কাইভ](https://jqsafi.github.io/zahid-hasan/)\n- [Happy 4th Birthday, Maisara! 🎂🎉](https://jqsafi.github.io/hbd-maisara/)\n\nExplore them in the top-left menu!";
     }
+
 
     if (query.includes('contact') || query.includes('hire') || query.includes('email') || query.includes('phone') || query.includes('reach')) {
       return "You can reach Shafayat via WhatsApp (+8801616332313) or email (shafayat@engineer.com). Feel free to connect on LinkedIn or GitHub as well!";
