@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jqsafi.github.io/sitemap.xml
