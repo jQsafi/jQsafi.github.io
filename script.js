@@ -197,6 +197,9 @@ Source of Truth Profile:
 - AI & Automation: Ollama, LM Studio, Local LLMs, Chrome Built-in AI, PuterAI, OpenWebUI, Groq, Selenium, Pytest, IoT/Hardware integration
 - Management: Agile (Scrum), Kanban, SAFe, ERP integration, OKRs, Stakeholder Communication
 - Recent Innovative Tasks & Projects:
+  • পঞ্চম শ্রেণি গণিত পাঠশালা - সম্পূর্ণ সমাধানমালা, কুইজ ও এআই গণিত শিক্ষক: https://jqsafi.github.io/class5-math-bangla
+  • ৫ম শ্রেণি ইংরেজি পাঠশালা - English for Today সম্পূর্ণ সমাধান, অডিও ও সৃজনশীল প্রশ্ন: https://jqsafi.github.io/class5-english-bangla
+  • Cox's Bazar — World's Longest Natural Sea Beach | Tourist Portal: https://jqsafi.github.io/coxs-bazar/
   • AiTomo - Chat Smarter, Chat Together: https://jqsafi.github.io/ai/
   • Arogga – Buy Medicine, Beauty & Healthcare Products Online in Bangladesh: http://arogga.com/
   • ড. এস. এম. রফিকুল ইসলাম বাচ্চু - উন্নয়ন ও সংগ্রামের প্রতিচ্ছবি | অফিশিয়াল ওয়েবসাইট: https://drsmrafiqulislammp.info/
@@ -241,8 +244,11 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
     if (query.includes('skill') || query.includes('experience') || query.includes('stack')) {
       return "Shafayat is a Senior Software Engineer & AI Specialist skilled in Prompt Engineering, NodeJS, ReactJS, Python, Kubernetes, Web Scraping, Laravel, and WordPress!";
     }
+    if (query.includes('math') || query.includes('গণিত') || query.includes('english') || query.includes('ইংরেজি') || query.includes('class 5') || query.includes('class5')) {
+      return "Shafayat has developed interactive educational platforms for Class 5:\n- [পঞ্চম শ্রেণি গণিত পাঠশালা - সম্পূর্ণ সমাধানমালা ও এআই শিক্ষক](https://jqsafi.github.io/class5-math-bangla)\n- [৫ম শ্রেণি ইংরেজি পাঠশালা - English for Today ও এআই ল্যাব](https://jqsafi.github.io/class5-english-bangla)";
+    }
     if (query.includes('project') || query.includes('work') || query.includes('portfolio') || query.includes('innovative') || query.includes('task')) {
-      return "Shafayat's recent innovative tasks include:\n- [AiTomo - Chat Smarter, Chat Together](https://jqsafi.github.io/ai/)\n- [Arogga – Buy Medicine & Healthcare Products Online](http://arogga.com/)\n- [ড. এস. এম. রফিকুল ইসলাম বাচ্চু - অফিশিয়াল ওয়েবসাইট](https://drsmrafiqulislammp.info/)\n- [জাহিদ হাসান | অফিসিয়াল ডিজিটাল পোর্টফোলিও ও আর্কাইভ](https://jqsafi.github.io/zahid-hasan/)\n- [Happy 4th Birthday, Maisara! 🎂🎉](https://jqsafi.github.io/hbd-maisara/)\n\nExplore them in the top-left menu!";
+      return "Shafayat's recent innovative tasks include:\n- [পঞ্চম শ্রেণি গণিত পাঠশালা](https://jqsafi.github.io/class5-math-bangla)\n- [৫ম শ্রেণি ইংরেজি পাঠশালা](https://jqsafi.github.io/class5-english-bangla)\n- [Cox's Bazar — Tourist Portal](https://jqsafi.github.io/coxs-bazar/)\n- [AiTomo - Chat Smarter, Chat Together](https://jqsafi.github.io/ai/)\n- [Arogga – Buy Medicine & Healthcare Products Online](http://arogga.com/)\n- [ড. এস. এম. রফিকুল ইসলাম বাচ্চু - অফিশিয়াল ওয়েবসাইট](https://drsmrafiqulislammp.info/)\n- [জাহিদ হাসান | অফিসিয়াল ডিজিটাল পোর্টফোলিও ও আর্কাইভ](https://jqsafi.github.io/zahid-hasan/)\n- [Happy 4th Birthday, Maisara! 🎂🎉](https://jqsafi.github.io/hbd-maisara/)\n\nExplore them in the top-left menu!";
     }
 
 
