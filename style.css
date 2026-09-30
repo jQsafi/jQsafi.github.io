@@ -139,6 +139,27 @@ body {
   transition: color 0.3s ease;
 }
 
+/* Download Button */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--btn-bg);
+  color: var(--btn-text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.download-btn:hover {
+  background-color: var(--btn-hover);
+  transform: translateY(-2px);
+}
+
 /* Social Media Icons */
 .social-links {
   display: flex;
