@@ -1,10 +1,7 @@
 // Pure Vanilla JavaScript for Shafayat Hossain Portfolio
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize Puter auth token if available
-  if (window.puter && typeof puter.setAuthToken === 'function') {
-    puter.setAuthToken("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InYyIn0.eyJ0IjoiYXUiLCJ2IjoiMiIsInV1IjoiSjIxTVZ2TTlRcU95N1ppOEtUQnNUUT09IiwiYXUiOiJJNUpJa1VXelFaQzNYdDF5cXQ4OU1BPT0iLCJzdSI6IlZJYkIwL09lVEI2WlhXS2lyUmlHemc9PSIsImFpIjoiSjIxTVZ2TTlRcU95N1ppOEtUQnNUUT09IiwiaWF0IjoxNzg2NzY4MDg2fQ.pih8EYyfx8_iI5poVMcoweoUmyQf7g6a3TPa2ekmQQQ");
-  }
+
 
   const themeToggleButton = document.getElementById('themeToggleButton');
   const themeIcon = document.getElementById('themeIcon');
@@ -218,24 +215,38 @@ User query: ${userText}
 Provide a professional, articulate, and technically sharp response in 2-3 concise sentences. Include links when relevant.`;
 
 
-    // Try calling Puter AI SDK if available
-    if (window.puter && window.puter.ai && typeof window.puter.ai.chat === 'function') {
+    // Call Groq API
+    const GROQ_API_KEY = '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';
+    if (GROQ_API_KEY) {
       try {
-        const response = await window.puter.ai.chat(systemPrompt);
-        let resText = '';
-        if (typeof response === 'string') {
-          resText = response;
-        } else if (response && response.message && response.message.content) {
-          resText = response.message.content;
-        } else if (response && response.text) {
-          resText = response.text;
-        }
+        const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GROQ_API_KEY}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: 'llama3-8b-8192', // or any other preferred Groq model
+            messages: [
+              { role: 'system', content: systemPrompt },
+              { role: 'user', content: userText }
+            ],
+            temperature: 0.7,
+            max_tokens: 200
+          })
+        });
 
-        if (resText && resText.trim()) {
-          return resText.trim();
+        if (response.ok) {
+          const data = await response.json();
+          const resText = data.choices[0]?.message?.content;
+          if (resText && resText.trim()) {
+            return resText.trim();
+          }
+        } else {
+          console.error('Groq API error:', await response.text());
         }
       } catch (err) {
-        console.warn('Puter AI request error, using fallback reply:', err);
+        console.warn('Groq API request error, using fallback reply:', err);
       }
     }
 
