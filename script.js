@@ -234,7 +234,7 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
             'Content-Type': 'application/json'
           },
           body: JSON.stringify({
-            model: 'llama3-8b-8192', // or any other preferred Groq model
+            model: 'qwen/qwen3.8-27b',
             messages: [
               { role: 'system', content: systemPrompt },
               { role: 'user', content: userText }
