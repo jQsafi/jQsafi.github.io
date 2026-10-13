@@ -224,7 +224,7 @@ Provide a professional, articulate, and technically sharp response in 2-3 concis
       }
     };
     // Base64 chunks of the key
-    const GROQ_API_KEY = decodeKey(['Z3NrX1pVMlNsMGlK', 'azQyWUhXMjZKY2U0', 'V0dkeWIzRllsRmR4', 'T2xWZUh2cEZ0dGc3', 'VE81eGpPOUY='].join(''));
+    const GROQ_API_KEY = decodeKey(['Z3NrX2h5OXdJeEFQ', 'TTZIRW1CVTdoWGZX', 'V0dkeWIzRllVZ3hO', 'ODV0eFgwZ3R0bnNi', 'ZGJiQk9hNTI='].join(''));
     if (GROQ_API_KEY) {
       try {
         const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
